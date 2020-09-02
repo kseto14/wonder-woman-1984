@@ -4,7 +4,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, l
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     music.baDing.play()
     info.changeScoreBy(1)
-    mySprite.startEffect(effects.confetti, 50)
+    mySprite.startEffect(effects.confetti, 300)
     tiles.setTileAt(location, myTiles.transparency16)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
