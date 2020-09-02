@@ -41,3 +41,4 @@ tiles.setTilemap(tiles.createTilemap(hex`100010000101010101010101010101010101010
     `, [myTiles.transparency16,sprites.castle.saplingOak,sprites.castle.tileGrass2,sprites.castle.shrub], TileScale.Sixteen))
 tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass2)
 scene.cameraFollowSprite(mySprite)
+info.startCountdown(20)
