@@ -8,7 +8,10 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
     tiles.setTileAt(location, myTiles.transparency16)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile1, function (sprite, location) {
-	
+    music.baDing.play()
+    info.changeScoreBy(1)
+    mySprite.startEffect(effects.hearts, 100)
+    tiles.setTileAt(location, myTiles.transparency16)
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
