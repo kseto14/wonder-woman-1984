@@ -2,6 +2,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, l
     game.over(true)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
+    music.baDing.play()
     info.changeScoreBy(1)
     mySprite.startEffect(effects.confetti, 50)
 })
@@ -47,3 +48,4 @@ tiles.setTilemap(tiles.createTilemap(hex`100010000101010101010101010101010101010
 tiles.placeOnRandomTile(mySprite, sprites.castle.tileGrass2)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(20)
+info.setScore(0)
