@@ -3,8 +3,10 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, l
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     info.changeScoreBy(1)
+    mySprite.startEffect(effects.confetti, 50)
 })
-let mySprite = sprites.create(img`
+let mySprite: Sprite = null
+mySprite = sprites.create(img`
     . . . . . . . . . . . . . . 
     . . . f f c c c c f f . . . 
     . . f f b c 5 5 c b f f . . 
