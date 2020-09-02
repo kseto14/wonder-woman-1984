@@ -1,3 +1,6 @@
+scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite, location) {
+	
+})
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . 
     . . . f f c c c c f f . . . 
@@ -36,3 +39,4 @@ tiles.setTilemap(tiles.createTilemap(hex`100010000101010101010101010101010101010
     2 2 2 . . . . . . . . . 2 2 . 2 
     2 2 2 2 2 2 2 2 2 2 2 2 2 2 . 2 
     `, [myTiles.transparency16,sprites.castle.saplingOak], TileScale.Sixteen))
+tiles.placeOnRandomTile(mySprite, myTiles.transparency16)
