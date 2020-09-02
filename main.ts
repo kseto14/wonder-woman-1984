@@ -5,6 +5,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
     music.baDing.play()
     info.changeScoreBy(1)
     mySprite.startEffect(effects.confetti, 50)
+    tiles.setTileAt(location, myTiles.transparency16)
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
